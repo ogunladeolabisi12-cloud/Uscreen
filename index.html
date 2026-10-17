@@ -298,11 +298,22 @@
                     </button>
 
                     <button class="demo">Book  a Demo</button>
-                    <div class="hamburger">=</div>
+                    <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
                 </nav>
 
             </div>
         </header>
+        <aside class="sidebar">
+            <ul>
+                <li><a href="">Product <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="">Use Cases <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="">Switch to Uscreen <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="">Learn<i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Log In</a></li>
+            </ul>
+            <button class="side-bar-btn">Start Free Trial<i class="fa-solid fa-right-long"></i></button>
+        </aside>
         <main>
             <section class="hero">
                 <div  class="hero-section section-wrap">
@@ -321,13 +332,13 @@
                         </div>
                         <div class="content1">
                             <a href="">VIDEO MONETIZATION</a>
-                            <h3>Top 11Fitness Streaming <br> Platforms:Reviewed</h3>
+                            <h3>Top 11Fitness Streaming Platforms:Reviewed</h3>
                             <p>A review of 11 fitness streaming platforms:5 comprehensive <br>
                                 solutions and 6 niche options for creators who want to monetize beyond YouTube and Instagram. Covers must -...
                             </p>
                             <div class="article-details">
                                 <div class="author-avatar">
-                                    <img src="assets/product-image.webp" alt="">
+                                    <img src="https://www.uscreen.tv/images/blog/authors/noah-landsberg.jpg" alt="">
                                 </div>
                                 <span class="author-name" style="color:black;">Noah Landsberg</span>
                                 <div class="dot"></div>
@@ -514,7 +525,8 @@
                         <button class="btn">Start your free trial</button>
                     </div>
             </section>
-            <footer>
+        </main>
+        <footer>
                 <div class="wrap">
                     <div class="footer-content">
                         <div class="Uscreen">
@@ -609,7 +621,14 @@
                         </div>
                     </div>
                 </div>
-            </footer>
-        </main>
+        </footer>
+        <script>
+            const hamburger=document.querySelector('.hamburger');
+            const sidebar=document.querySelector('.sidebar');
+            hamburger.addEventListener('click', () => {
+                sidebar.classList.toggle('active')
+            })
+        </script>
+        
     </body>
 </html>

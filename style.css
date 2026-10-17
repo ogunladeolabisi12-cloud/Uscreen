@@ -14,19 +14,62 @@ header{
     background-color:white;
     z-index:1000;
 }
+.hamburger{
+    cursor: pointer;
+    font-size: 26px;
+}
+.sidebar{
+    position: fixed;
+    top:60px;
+    width:280px;
+    left:-280px;
+    height:100dvh;
+    z-index: 120;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.2);
+    transition: top 0.5s ease-in;
+}
+.sidebar ul{
+    list-style-type: none;
+}
+.sidebar li{
+    padding:20px ;
+    border-bottom: 1px solid rgba(84, 82, 82, 0.365);
+    width:100%;
+}
+.sidebar a{
+    text-decoration: none;
+    color:black;
+    width:100%;
+}
+.sidebar.active{
+    left:0;
+    width:100%;
+}
 
+.side-bar-btn{
+    border:none;
+    border-radius: 11px;
+    width:94%;
+    background-color: rgb(0, 128, 255);
+    color:white;
+    font-weight: bold;
+    font-size: large;
+    padding: 12px 24px;
+    text-align: center;
+    cursor: pointer;
+    margin:100px 20px auto;
+}
 .wrap{
     max-width:1450px;
     margin:auto;
     padding: 0 30px;
 }
-
 .section-wrap{
     max-width:1200px;
     margin:auto;
     padding: 0 30px;
 }
-
 .responsive-bar{
     background-color: white;
     display: flex;
@@ -34,27 +77,22 @@ header{
     justify-content: space-between;
     display:none;
 }
-
 .responsive-bar img{
     width:50px;
 }
-
 .responsive-bar button{
     margin-bottom: 20px;
 }
-
 .nav-bar{
     height: 60px;
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
-
 .logo{
     width:150px;
     height: auto;
 }
-
 .nav-links{
     list-style: none;
     display: flex;
@@ -62,14 +100,11 @@ header{
     justify-content: center;
     gap:40px;
 }
-
 .nav-links a{
     color: black;
     text-decoration:none;
 }
-
 .dropdown{
-    /* display:none; */
     visibility:hidden;
     opacity:0;
     transition: opacity 0.2s ease,visibility 0s linear 0.3s;
@@ -81,41 +116,29 @@ header{
     padding:35px 0;
     box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
-
 .dropdown1:hover .dropdown{
     visibility: visible;
     opacity:1;
     transition-delay:0s;
 }
-
 .dropdown-menu{
     display:flex;
     align-items: center;
-    /* justify-content: center; */
     max-width: 1200px;
     margin:auto;
-    
 }
-
 .grid{
     flex:1;
-
     display:grid;
     grid-template-columns:repeat(3,1fr);
-
     gap:10px;
 }
-
 .grid a{
     display:block;
-
     padding:10px;
-
     border-radius:8px;
-
     transition:background-color 0.2s ease;
 }
-
 .grid h3{
     margin:0 0 8px;
     font-size:17px;
@@ -124,20 +147,12 @@ header{
 .grid h3:hover{
     color:blue;
 }
-
 .grid p{
     margin:0;
-
     color:#777;
-
     font-size:14px;
-
     line-height:1.5;
 }
-
-
-
-
 .image img{
     width:300px;
     height:250px;
@@ -154,20 +169,15 @@ header{
     left:0;
     z-index: 200;
     width:100vw;
-
     background-color:white;
-
     padding:35px 0;
-
     box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
-
 .dropdown-wrap:hover .dropdown2{
     visibility: visible;
     opacity:1;
     transition-delay:0s;
 }
-
 .dropdown-menu2{
     display:flex;
     align-items: center;
@@ -199,8 +209,7 @@ header{
     color:blue;
 }
 .grid2 p{
-    color:grey;
-    
+    color:grey; 
 }
 .use-card{
     background-color: rgba(165, 190, 241, 0.484);
@@ -219,7 +228,6 @@ header{
     margin:6px;
 
 }
-
 button .fa-g  {
     color:rgb(57, 115, 231);
 }
@@ -229,7 +237,6 @@ button .fa-star{
 button .fa-paper-plane{
     color:rgb(57, 115, 231);
 }
-
 .btn1, .demo, .btn{
     border:none;
     border-radius: 30px;
@@ -241,15 +248,12 @@ button .fa-paper-plane{
     text-align: center;
     cursor: pointer;
 }
-
 .btn1:hover, .demo:hover {
     background-color: rgb(21, 21, 152);    
 }
-
 .demo, .hamburger {
     display: none;
 }
-
 /* Hero section */
 .hero {
     margin-top:60px;
@@ -440,26 +444,24 @@ span{
 
 /* Blogs Section */
 .blogs {
-    margin-top: 1px solid black;
+    border-top: 1px solid black;
+    padding: 60px 0;
 }
 
 .blogs h2{
-    margin-top:60px;
-    margin-left:40px;
     font-size:30px;
 }
 
 .blogs-grid{
+    margin-top: 20px;
     display:grid;
     grid-template-columns: repeat(3,1fr);
     gap:15px;
 }
 .card{
     border: 1px solid rgba(138, 138, 138, 0.196);
-    /* height:300px; */
     border-radius: 12px;
     transition: all 0.3s ease;
-    
 }
 .card:hover{
     transform: translateY(-5px);
@@ -467,7 +469,6 @@ span{
 }
 
 .card > div:first-child{
-    overflow: hidden;
     border-radius: 12px 12px 0 0;
 }
 .card .card-content{
@@ -489,7 +490,7 @@ span{
 .card img{
     width:100%;
     display: block;
-        border-radius: 12px 12px 0 0;
+    border-radius: 12px 12px 0 0;
     object-fit: cover;
     transition: all 0.3s ease;
 }
@@ -497,7 +498,7 @@ span{
     transform: scale(1.05);
 }
 .pagination{
-    margin: 60px;
+    margin: 60px auto 0;
     text-align: center;
 }
 .pagination .one{
@@ -533,21 +534,15 @@ span{
     color:black;
     border-radius: 12px;
 }
-
 /* Call to Action */
 .call-to-action {
     background-color: rgba(0, 0, 0, 0.904);
 }
-
 .container3{
     text-align: center;
     padding:100px;
-    width:600px;
-    
 }
-
 .container3 h4{
-    
     color:white;
     font-size: 35px;
 }
@@ -556,28 +551,25 @@ span{
     color:grey;
     padding:30px;
     font-size: 18px;
-    width:600px;
+    max-width:600px;
+    margin: auto;
     text-align: center;
-    transform: translate(-100px);
 }
 
 .footer-content{
     display:flex;
     justify-content: space-between ;
     padding:50px;
-    
-   
     line-height: 35px;
     
 }
 .footer-responsive{
-        display: flex;
-        gap:30px;
-    }
+    display: flex;
+    gap:30px;
+}
 
 .footer-content a:hover{
     color:blue
-    
 }
 .Uscreen h3{
     color:rgb(32, 32, 32);
@@ -598,7 +590,6 @@ span{
 }
 .footer-content a:hover{
     color:blue
-    
 }
 .footer-bottom{
     border-top:1px solid rgba(0, 0, 0, 0.267) ;
@@ -618,7 +609,6 @@ span{
 .footer-bottom-links a{
     text-decoration: none;
     color: rgb(32, 32, 32);
-    
 }
 .footer-bottom-links a:hover{
     color:blue
@@ -651,6 +641,11 @@ span{
         display: none;
     }
 
+    .btn1, .demo, .btn{
+        border-radius: 24px;
+        padding: 12px 16px;
+    }
+
     .demo, .hamburger {
         display: block;
     }
@@ -662,23 +657,20 @@ span{
     .footer-content{
         display: block;
         padding:60px 0px;
-        
     }
     .footer-responsive{
         display: flex;
-        
     }
     .footer-bottom-links{
         display: block;
-        
     }
     
     .footer-bottom-icons2{
         border-top: 1px solid rgba(0, 0, 0, 0.269);
         border-bottom: 1px solid rgba(0, 0, 0, 0.249);
-        padding: 15px;
+        padding: 10px;
         display: flex;
-        gap: 20px;
+        justify-content: center;
         align-items: center;
     }
      
@@ -686,7 +678,7 @@ span{
        background-color: black;
        color: white;
         border-radius: 4px;
-        transform:translate(150px);
+        margin:auto;
         padding:6px;
     }
     .footer-bottom .icons {
@@ -696,23 +688,20 @@ span{
     .blogs-grid{
         grid-template-columns: repeat(2,1fr);
     }
-    @media  screen and (max-width:762px){
+    @media  screen and (max-width:762px){ 
         .blogs-grid{
             grid-template-columns: repeat(2,1fr);
         }
-        .hero{
-            width: 100dvw;
-        }
-        .hero{
-            transform: translate(80px);
-        }
+        
         .hero-section h1{
-            width:400px;
             font-size: 30px;
+        }
+        .hero-section p{
+            max-width:550px;
         }
         .herosection-image{
             flex-direction: column;
-            width:550px;
+            width:100%;
         }
 
         .herosection-image:hover{
@@ -728,24 +717,14 @@ span{
             width:50%;
         }
 
-        .first-image{
-            width:600px;
-            height:100%;
-            object-fit:cover;
-            transition:all 0.2s ease;
-        }
-
         .herosection-image .content1{
-            width: 500px;
+            width: 50%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin: 5px 20px 10px 50px;
             gap: 18px;
         } 
-         .call-to-action{
-            width:100dvw;  
-        }
+         
         .footer-info{
             display: none;
         }
@@ -756,32 +735,28 @@ span{
             
         } 
         .footer-responsive p{
-            border-bottom:1px solid rgba(0, 0, 0, 0.525);
-            width:100vw;
+            border-bottom:1px solid rgba(0, 0, 0, 0.299);
+        }
+        .footer-bottom{
+            border: none;
         }
         .footer-bottom-links ul{
             flex-direction: column;
-            padding: 10px;
-            gap:20px;
+            padding:0px;
+            gap: 20px;
         }
-       
-       
-        
     }
     @media  screen and (max-width:480px){
         .blogs-grid{
             grid-template-columns: repeat(1,1fr);
         }
-        .hero{
-            transform: translate(80px);
-        }
+        
         .hero-section h1{
-            width:400px;
+            max-width:400px;
             font-size: 30px;
         }
         .herosection-image{
             flex-direction: column;
-            width:550px;
         }
 
         .herosection-image:hover{
@@ -794,48 +769,32 @@ span{
         }
 
         .herosection-image .img-wrapper {
-            width:50%;
-        }
-
-        .first-image{
-            width:600px;
-            height:100%;
-            object-fit:cover;
-            transition:all 0.2s ease;
+            width:100%;
         }
 
         .herosection-image .content1{
-            width: 500px;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin: 5px 20px 10px 50px;
             gap: 18px;
         } 
-         .card{
-            width: 550px;
+    
+        .pagination{
+            width:100%;
         }
-        .call-to-action{
-            width:650px;  
-        }
-        .footer-info{
-            display: none;
-        }
+        
         .footer-content .footer-responsive{
             display: flex;
             flex-direction: column;
             justify-content: center;
             
         } 
-        .footer-responsive p{
-            border-bottom:1px solid rgba(0, 0, 0, 0.525);
-        }
+        
         .footer-bottom-links ul{
             flex-direction: column;
             padding: 10px;
             gap:20px;
-        }
-       
-        
+        }      
     }
 }
